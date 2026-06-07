@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cgr6hb7n5felr"]
+
+[ext_resource type="PackedScene" uid="uid://bbpxr6bp5y284" path="res://entities/jogador.tscn" id="2_33cqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kiuu"]
+size = Vector2(99.34375, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbls1"]
+size = Vector2(80.58594, 17.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33cqm"]
+size = Vector2(79.34375, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwcet"]
+size = Vector2(69.58594, 17.25)
+
+[node name="Game" type="Node2D" unique_id=1964273374]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1835610398]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=98434686]
+position = Vector2(49.328125, 201)
+shape = SubResource("RectangleShape2D_5kiuu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1897872468]
+position = Vector2(153, 190)
+shape = SubResource("RectangleShape2D_dbls1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1197062157]
+position = Vector2(330, 169)
+shape = SubResource("RectangleShape2D_33cqm")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=455208893]
+position = Vector2(241, 177)
+shape = SubResource("RectangleShape2D_xwcet")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=907307290]
+position = Vector2(430, 146)
+shape = SubResource("RectangleShape2D_5kiuu")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=406760280]
+position = Vector2(509, 53)
+shape = SubResource("RectangleShape2D_dbls1")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=2077691701]
+position = Vector2(529, 118)
+shape = SubResource("RectangleShape2D_33cqm")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1671211572]
+position = Vector2(603, 92)
+shape = SubResource("RectangleShape2D_xwcet")
+
+[node name="jogador" parent="." unique_id=1416197592 instance=ExtResource("2_33cqm")]
+position = Vector2(16, 171)

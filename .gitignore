@@ -1,0 +1,21 @@
+# Godot 4
+.godot/
+*.uid
+*.tmp
+
+# Imported assets
+.import/
+
+# Mono
+.mono/
+bin/
+obj/
+
+# IDE
+.vscode/
+.idea/
+.vs/
+
+# OS
+.DS_Store
+Thumbs.db
