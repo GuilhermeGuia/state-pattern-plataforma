@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c4p26u4taliqx" path="res://scripts/player/player.gd" id="1_m0gj8"]
 [ext_resource type="Texture2D" uid="uid://qfbru1v0byts" path="res://sprites/player/Jumping (32 x 32).png" id="3_as3f3"]
 [ext_resource type="Texture2D" uid="uid://dq4axj0he7kbj" path="res://sprites/player/Running (32 x 32).png" id="3_mi7s2"]
+[ext_resource type="PackedScene" uid="uid://bgqykhdbcpd68" path="res://scripts/player/state/state_manager.tscn" id="5_krsmw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6dywx"]
 atlas = ExtResource("1_6dywx")
@@ -90,3 +91,11 @@ position = Vector2(0, 7)
 shape = SubResource("CapsuleShape2D_rcdn5")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=792805903]
+
+[node name="state_manager" parent="." unique_id=196566047 instance=ExtResource("5_krsmw")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=404038172]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=2071431833]
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bgqykhdbcpd68"]
+
+[ext_resource type="Script" uid="uid://dbb4vvli0k3yh" path="res://scripts/player/state/state_machine.gd" id="1_v0wcs"]
+[ext_resource type="Script" uid="uid://c183ctao2j4mg" path="res://scripts/player/state/idle.gd" id="2_2anvx"]
+[ext_resource type="Script" uid="uid://bax1klryad7rr" path="res://scripts/player/state/walk.gd" id="3_jnrsw"]
+[ext_resource type="Script" uid="uid://cwrosepemnqxs" path="res://scripts/player/state/jump.gd" id="4_3dauj"]
+
+[node name="state_manager" type="Node" unique_id=196566047]
+script = ExtResource("1_v0wcs")
+
+[node name="idle" type="Node" parent="." unique_id=149656447]
+script = ExtResource("2_2anvx")
+
+[node name="walk" type="Node" parent="." unique_id=1986886601]
+script = ExtResource("3_jnrsw")
+
+[node name="jump" type="Node" parent="." unique_id=1085386900]
+script = ExtResource("4_3dauj")
