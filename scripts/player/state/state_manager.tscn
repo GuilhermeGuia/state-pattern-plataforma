@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c183ctao2j4mg" path="res://scripts/player/state/idle.gd" id="2_2anvx"]
 [ext_resource type="Script" uid="uid://bax1klryad7rr" path="res://scripts/player/state/walk.gd" id="3_jnrsw"]
 [ext_resource type="Script" uid="uid://cwrosepemnqxs" path="res://scripts/player/state/jump.gd" id="4_3dauj"]
+[ext_resource type="Script" uid="uid://bf86cncdvkl2n" path="res://scripts/player/state/fall.gd" id="5_861j6"]
 
 [node name="state_manager" type="Node" unique_id=196566047]
 script = ExtResource("1_v0wcs")
@@ -16,3 +17,6 @@ script = ExtResource("3_jnrsw")
 
 [node name="jump" type="Node" parent="." unique_id=1085386900]
 script = ExtResource("4_3dauj")
+
+[node name="fall" type="Node" parent="." unique_id=1573958964]
+script = ExtResource("5_861j6")

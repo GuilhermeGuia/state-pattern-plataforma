@@ -5,18 +5,19 @@ extends BaseState
 
 func enter() -> void:
 	player.anima.play("jump")
-	player.velocity.y = player.JUMP_VELOCITY
 	player.update_text(name)
 
 func physics_process(delta: float) -> int:
 	var move = Input.get_axis("mover_esquerda", "mover_direita")
 
 	player.velocity.x = move * player.SPEED
-	
+
 	if(move != 0):
 		player.anima.flip_h = move < 0
 
-	if player.velocity.y > 0:
-		return State.Fall
+	if player.is_on_floor():
+		if move != 0:
+			return State.Walk
+		return State.Idle
 
 	return State.Null

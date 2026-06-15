@@ -4,6 +4,7 @@ extends Node
 	BaseState.State.Idle: $idle,
 	BaseState.State.Walk: $walk,
 	BaseState.State.Jump: $jump,
+	BaseState.State.Fall: $fall,
 }
 
 var current_state: BaseState
@@ -14,8 +15,6 @@ func change_state(new_state: int) -> void:
 
 	current_state = states[new_state]
 	current_state.enter()
-	
-	print(current_state.name)
 
 func iniciar(player: Player) -> void:
 	for child in get_children():
@@ -32,6 +31,3 @@ func input(event: InputEvent) -> void:
 	var new_state = current_state.input(event)
 	if new_state != BaseState.State.Null:
 		change_state(new_state)
-
-#func update_state_label(state_name: String) -> void:
-	#state_label.text = "Estado: " + state_name

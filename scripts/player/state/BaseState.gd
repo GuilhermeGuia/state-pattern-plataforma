@@ -5,7 +5,8 @@ enum State {
 	Null,
 	Idle,
 	Walk,
-	Jump
+	Jump,
+	Fall
 }
 
 @export var animation_name: String
@@ -14,6 +15,7 @@ var player: Player
 
 func enter() -> void:
 	player.anima.play(animation_name)
+	player.update_text(name)
 
 func exit() -> void:
 	pass

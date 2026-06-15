@@ -2,6 +2,7 @@ extends BaseState
 
 func enter() -> void:
 	player.anima.play("walk")
+	player.update_text(name)
 
 func input(event: InputEvent) -> int:
 	if Input.is_action_just_pressed("pular") && player.is_on_floor():
@@ -9,18 +10,13 @@ func input(event: InputEvent) -> int:
 	return State.Null
 
 func physics_process(delta: float) -> int:
-	var move = 0
-	if Input.is_action_pressed("mover_esquerda"):
-		move = -1
-		player.anima.flip_h = true
-	elif Input.is_action_pressed("mover_direita"):
-		move = 1
-		player.anima.flip_h = false
-	
-	player.velocity.y += player.get_gravity().y * delta
+	var move = Input.get_axis("mover_esquerda", "mover_direita")	
 	player.velocity.x = move * player.SPEED
 	
+	if(move != 0):
+		player.anima.flip_h = move < 0
+
 	if move == 0:
 		return State.Idle
-
+	
 	return State.Null

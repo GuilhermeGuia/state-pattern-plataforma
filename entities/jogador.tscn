@@ -99,3 +99,4 @@ shape = SubResource("CapsuleShape2D_rcdn5")
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=2071431833]
 offset_right = 40.0
 offset_bottom = 23.0
+text = "OLA"
