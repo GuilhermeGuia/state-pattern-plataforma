@@ -97,8 +97,7 @@ O projeto também evidencia padrões GRASP:
 * **Low Coupling**: estados são independentes entre si.
 * **High Cohesion**: cada estado concentra apenas sua própria lógica.
 * **Polymorphism**: comportamentos diferentes são tratados via interface comum.
-* **Controller**: a StateMachine atua como controlador das transições de estado.
-
+* **Pure Fabrication**: a StateMachine é uma classe criada artificialmente, apenas para melhorar o design do sistema.
 ---
 
 ## Tecnologias Utilizadas
