@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbpxr6bp5y284"]
 
 [ext_resource type="Texture2D" uid="uid://t4a05euswdoa" path="res://sprites/player/Idle (32 x 32).png" id="1_6dywx"]
-[ext_resource type="Script" uid="uid://c4p26u4taliqx" path="res://scripts/player/player.gd" id="1_m0gj8"]
+[ext_resource type="Script" uid="uid://ghltv055y77h" path="res://scripts/player/player.gd" id="1_m0gj8"]
 [ext_resource type="Texture2D" uid="uid://qfbru1v0byts" path="res://sprites/player/Jumping (32 x 32).png" id="3_as3f3"]
 [ext_resource type="Texture2D" uid="uid://dq4axj0he7kbj" path="res://sprites/player/Running (32 x 32).png" id="3_mi7s2"]
 [ext_resource type="PackedScene" uid="uid://bgqykhdbcpd68" path="res://scripts/player/state/state_manager.tscn" id="5_krsmw"]
@@ -43,7 +43,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m0gj8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 2.0
 }, {
@@ -51,7 +51,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nvuv8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -68,7 +68,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vv3b2")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 5.0
 }]
@@ -99,4 +99,3 @@ shape = SubResource("CapsuleShape2D_rcdn5")
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=2071431833]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "OLA"

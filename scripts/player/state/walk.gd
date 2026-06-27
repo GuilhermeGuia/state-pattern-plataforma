@@ -16,6 +16,9 @@ func physics_process(delta: float) -> int:
 	if(move != 0):
 		player.anima.flip_h = move < 0
 
+	if player.velocity.y > 0:
+		return State.Fall
+
 	if move == 0:
 		return State.Idle
 	
